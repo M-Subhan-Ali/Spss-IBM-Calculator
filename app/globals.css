@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* SPSS IBM Professional Theme */
+  --color-spss-bg: #f0f0f0;
+  --color-spss-ribbon: #e8e8e8;
+  --color-spss-ribbon-hover: #d9d9d9;
+  --color-spss-border: #b0b0b0;
+  --color-spss-border-light: #d0d0d0;
+  --color-spss-text: #000000;
+  --color-spss-text-secondary: #333333;
+  --color-spss-selected: #0052a3;
+  --color-spss-selected-light: #d5e4f7;
+  --color-spss-accent: #0066cc;
+  --color-spss-panel-bg: #ffffff;
+  --color-spss-header-bg: #d0d0d0;
+  --color-spss-grid-header: #c0c0c0;
+  --color-spss-grid-row: #ffffff;
+  --color-spss-grid-row-alt: #f5f5f5;
+  --color-spss-grid-border: #b0b0b0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f0f0f0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f0f0;
+  color: #000000;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Professional scrollbars */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8e8e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+}
+
+/* SPSS Grid styling */
+.spss-grid {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+}
+
+.spss-table {
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 11px;
+}
+
+.spss-table th {
+  background: #c0c0c0;
+  border: 1px solid #909090;
+  padding: 4px 6px;
+  text-align: left;
+  font-weight: bold;
+  color: #000000;
+}
+
+.spss-table td {
+  border: 1px solid #d0d0d0;
+  padding: 2px 4px;
+}
+
+.spss-table tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+.spss-table tr:nth-child(even) td {
+  background: #f5f5f5;
 }
